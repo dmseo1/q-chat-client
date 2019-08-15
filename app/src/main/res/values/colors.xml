@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff901e</color>
+    <color name="colorPrimaryDark">#ff901e</color>
+    <color name="colorAccent">#AA5500</color>
+    <color name="colorEmptyMessage">#999999</color>
+    <color name="colorCancelButton">#bbbbbb</color>
+    <color name="colorOKButton">#ff901e</color>
+</resources>

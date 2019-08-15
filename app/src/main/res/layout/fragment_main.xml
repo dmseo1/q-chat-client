@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:orientation="vertical"
+                                             android:background="#ffffff">
+
+    <android.support.v4.widget.DrawerLayout
+            android:id="@+id/menu_drawer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:openDrawer="start">
+
+
+        <!-- 홈(내 정보/친구보기) -->
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/HOME"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            <LinearLayout
+                    android:id="@+id/user_signup_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ff901e"
+                    android:orientation="horizontal"
+                    android:padding="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                            android:id="@+id/menu_home"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:contentDescription="@string/HOME_menu_icon"
+                            android:src="@drawable/ico_menu" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="#ff901e"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="@string/HOME_title"
+                            android:textColor="#ffffff"
+                            android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_signup_title">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:id="@+id/img_profileimg"
+                                android:layout_width="105dp"
+                                android:layout_height="105dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ico_no_profile_img" />
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            <TextView
+                                    android:id="@+id/lbl_nickname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                            <TextView
+                                    android:id="@+id/lbl_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="4dp"
+                                    android:textAlignment="center"
+                                    android:textColor="#666666"
+                                    android:textSize="18sp"
+
+                                    android:textStyle="bold" />
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="0dp"
+                                    android:orientation="horizontal">
+
+                                <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/HOME_point_icon"
+                                        android:src="@drawable/ico_points" />
+
+                                <TextView
+                                        android:id="@+id/lbl_points"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_weight="1"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+
+                                <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:contentDescription="@string/HOME_exp_icon"
+                                        android:src="@drawable/ico_exp" />
+
+                                <TextView
+                                        android:id="@+id/lbl_exp"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_weight="1"
+                                        android:textColor="#000000"
+                                        android:textSize="16sp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="#bbbbbb" />
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                    >
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:text="@string/HOME_list_friend"/>
+
+                        <android.support.constraint.ConstraintLayout
+                                android:id="@+id/HOME_friends_list_constraint_wrapper"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:fillViewport="true"
+                                    app:layout_constraintBottom_toBottomOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintTop_toTopOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintStart_toStartOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintEnd_toEndOf="@+id/HOME_friends_list_constraint_wrapper">
+
+<!--
+                                <FrameLayout
+                                        android:id="@+id/gFriendsHolder"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                > -->
+
+                                    <GridView
+                                            android:id="@+id/HOME_friends_list_grid"
+                                            android:layout_width="1000dp"
+                                            android:layout_height="wrap_content"
+                                            android:scrollbars="horizontal"
+                                    />
+
+                               <!-- </FrameLayout> -->
+                            </HorizontalScrollView>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/HOME_friends_list_no_friend"
+                                    android:text="@string/HOME_friends_list_no_friend"
+                                    android:textColor="@color/colorEmptyMessage"
+                                    android:visibility="gone"
+                                    app:layout_constraintTop_toTopOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintEnd_toEndOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintStart_toStartOf="@+id/HOME_friends_list_constraint_wrapper"
+                                    app:layout_constraintBottom_toBottomOf="@+id/HOME_friends_list_constraint_wrapper"/>
+                        </android.support.constraint.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:text="@string/HOME_list_character"/>
+
+
+
+                        <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                android:fillViewport="true">
+                            <FrameLayout
+                                    android:id="@+id/gCharactersHolder"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                <GridView
+                                        android:id="@+id/HOME_characters_list_grid"
+                                        android:layout_width="1000dp"
+                                        android:layout_height="wrap_content"
+                                        android:scrollbars="horizontal"
+                                />
+
+                            </FrameLayout>
+
+
+                        </HorizontalScrollView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- 친구 -->
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/FRIENDS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            <LinearLayout
+                    android:id="@+id/layFriends"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ff901e"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:id="@+id/menu_friends"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ico_menu" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="#ff901e"
+                                android:paddingLeft="10dp"
+                                android:text="친구"
+                                android:textColor="#ffffff"
+                                android:textSize="22sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/friendscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="추가한 친구 (00)"
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    <TextView
+                            android:id="@+id/nofriends"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="추가한 친구가 없습니다"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/friendlist"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:scrollbars="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- 랭킹 -->
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/RANKING"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ff901e"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <ImageView
+                                android:id="@+id/menu_ranking"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ico_menu" />
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="#ff901e"
+                                android:paddingLeft="10dp"
+                                android:text="랭킹"
+                                android:textColor="#ffffff"
+                                android:textSize="22sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:id="@+id/btn_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#fee338">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="전체 랭킹"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:id="@+id/btn_friends"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#ffffff">
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="친구 랭킹"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/l_ranking_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal">
+
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="내 랭킹: "
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        <TextView
+                                android:id="@+id/ranking_myranking_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00 위"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal">
+
+
+                        <TextView
+                                android:id="@+id/myranking_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="※ 전체 랭킹은 10위까지만 표시됩니다."
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="#000000"
+                    >
+
+                        <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="순위"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="닉네임"/>
+
+                        <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="경험치"/>
+
+                    </LinearLayout>
+
+                    <ListView
+                            android:id="@+id/rankinglist_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/l_ranking_friends"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal">
+
+
+                        <TextView
+                                android:id="@+id/myranking_friends"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="내 랭킹: "
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                        <TextView
+                                android:id="@+id/ranking_myranking_friends"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00 위"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:orientation="horizontal">
+
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="내가 추가한 친구들과 랭킹을 비교할 수 있습니다."
+                                android:textColor="#000000"
+                                android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="#000000"
+                    >
+
+                        <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="순위"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="닉네임"/>
+
+                        <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="18sp"
+                                android:textAlignment="center"
+                                android:text="경험치"/>
+
+                    </LinearLayout>
+
+                    <ListView
+                            android:id="@+id/rankinglist_friends"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+        <!-- 캐릭터샵 -->
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/CHARACTERSHOP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            <LinearLayout
+                    android:id="@+id/user_signup_title_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ff901e"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:id="@+id/menu_charactershop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ico_menu" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="#ff901e"
+                            android:paddingLeft="10dp"
+                            android:text="캐릭터샵"
+                            android:textColor="#ffffff"
+                            android:textSize="22sp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_signup_title_2">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <GridView
+                            android:id="@+id/charactorshop_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:numColumns="3" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <Button
+                                android:id="@+id/charactershop_prev"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="◀" />
+
+                        <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                        <Button
+                                android:id="@+id/charactershop_next"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:text="▶" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+
+        <android.support.design.widget.NavigationView
+                android:id="@+id/menu_selector"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="#fff4db"
+                android:visibility="visible">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+                    <ImageView
+                            android:layout_width="220dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/mainlogo" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:id="@+id/l_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_main" />
+
+                    <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="홈"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:id="@+id/l_friends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_friends" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="친구"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:id="@+id/l_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_message" />
+
+                    <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="쪽지함"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                        android:id="@+id/l_ranking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_room_master" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="랭킹"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:id="@+id/l_character_shop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_charactershop" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#000000"
+                            android:layout_weight="1"
+                            android:text="캐릭터샵"
+                            android:textSize="25sp" />
+
+
+
+
+                </LinearLayout>
+
+                <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+
+
+                <LinearLayout
+                        android:id="@+id/l_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_setting" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="설정"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:id="@+id/l_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ico_logout" />
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:text="로그아웃"
+                            android:textColor="#000000"
+                            android:textSize="25sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <ImageView
+            android:id="@+id/opa_window"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#66000000"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+            android:id="@+id/pg_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+</android.support.constraint.ConstraintLayout>
