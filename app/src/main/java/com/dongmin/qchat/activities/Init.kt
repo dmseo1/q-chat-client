@@ -16,7 +16,7 @@ class Init : AppCompatActivity() {
     //어플리케이션 기초 정보 static 변수
     companion object StaticData {
         var NO_PROFILE_IMG = ""
-        var basicURL : String = "http://dak2183242.cafe24.com/qchat/"
+        var basicURL : String = "YOUR_ROOT_DIRECTORY";
         var basicIP : String = ""
         var minRoomMaxPeople : Int = 0
         var maxRoomMaxPeople : Int = 0
